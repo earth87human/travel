@@ -45,6 +45,13 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 img {
@@ -1793,6 +1800,9 @@ img {
     width: 1px;
     height: 30px;
     flex: 0 0 30px;
+    min-width: 0;
+    margin: 0 auto;
+    background: var(--cream-dark);
   }
 
   .timeline {
@@ -2361,9 +2371,43 @@ img {
 }
 
 /* ===================================================
-   MOBILE-SPECIFIC POLISH · v2.3
-   保持 SVG 圖表文字可讀，並改善小螢幕細節
+   MOBILE-SPECIFIC POLISH · v2.4
+   重新審視全頁面手機版，修正版面切到 / 元素重疊
 =================================================== */
+
+/* === Hero 區關鍵修正 (適用所有手機/平板) === */
+@media (max-width: 1024px) {
+  /* 改成從頂部開始排，避免 align-items:center 把內容推到 nav 後面 */
+  .hero {
+    min-height: 600px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  /* hero-meta 與 hero-cta 在手機上要各自獨佔一行 */
+  .hero-meta {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: -webkit-fit-content;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 強制讓 hero-cta 換行（hero-content 內視為 block 行為） */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
   /* === 每日路線 SVG：避免文字縮太小 === */
   .day-route-svg {
@@ -2476,6 +2520,189 @@ img {
   /* === 各章節標題在手機更小 === */
   .section-header {
     margin-bottom: 56px;
+  }
+}
+
+/* === 手機字級與間距收斂，避免長文擠出邊框 === */
+@media (max-width: 600px) {
+  /* 章節標題字級收斂 */
+  .section-title {
+    font-size: 1.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+  }
+
+  /* Overview 引言縮字並收緊邊框 */
+  .overview-text .lead {
+    font-size: 1.15rem;
+    padding-left: 16px;
+    line-height: 1.7;
+  }
+
+  .overview-text p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  /* Hero 細節 */
+  .title-jp {
+    font-size: 2.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .title-en {
+    font-size: 0.9rem;
+    letter-spacing: 0.4em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-tagline {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+
+  .hero-eyebrow .line {
+    width: 32px;
+  }
+
+  .eyebrow-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+  }
+
+  /* Day card 日期數字收斂避免擠出 */
+  .date-day {
+    font-size: 2.8rem;
+  }
+
+  .date-month {
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+  }
+
+  .day-title {
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+  }
+
+  .day-route {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* 飯店標題太長會擠出 */
+  .hotel-body h3 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  .hotel-desc {
+    font-size: 0.9rem;
+  }
+
+  /* 美食卡標題在手機字級 */
+  .food-info h4 {
+    font-size: 1.15rem;
+  }
+
+  .food-large .food-info h4 {
+    font-size: 1.3rem;
+  }
+
+  /* 紀念品卡片標題在手機字級 */
+  .memory-card h4 {
+    font-size: 1.1rem;
+  }
+
+  /* 路線概覽地點名稱在手機字級 */
+  .route-name {
+    font-size: 1rem;
+  }
+
+  /* 預算表標頭較大字 */
+  .budget-value {
+    font-size: 2rem;
+  }
+
+  .budget-label,
+  .budget-per {
+    font-size: 0.75rem;
+  }
+
+  /* Time row 內文不擠 */
+  .time-row {
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    font-size: 0.88rem;
+  }
+
+  .time-row .time {
+    font-size: 0.88rem;
+  }
+
+  /* Note card / Hotel feature 字級 */
+  .note-card p,
+  .hotel-features li {
+    font-size: 0.9rem;
+  }
+
+  /* Container 額外 padding 收緊但不致塞滿 */
+  .container {
+    padding: 0 18px;
+  }
+
+  /* 確保所有長中英日文都會自動斷行不溢出 */
+  .time-row .event,
+  .hotel-features li,
+  .day-title,
+  .hotel-body h3,
+  .food-info h4,
+  .memory-card h4,
+  .map-info h4,
+  .timeline-body h4,
+  .note-card p,
+  .map-info p,
+  .memory-card p,
+  .timeline-body p,
+  .food-info p,
+  .b-detail,
+  .b-item,
+  .b-price {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Hero 在手機上更貼近頂部 */
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  /* 卡片 padding 微調，給文字更多呼吸空間 */
+  .highlight-body {
+    padding: 32px 24px;
+  }
+
+  .hotel-meta {
+    gap: 16px;
+  }
+
+  .day-card,
+  .day-card.reverse {
+    padding: 24px 20px;
+  }
+
+  /* Day Card 時間欄字級對齊 */
+  .time-row {
+    padding: 4px 0;
   }
 }
 
