@@ -82,7 +82,7 @@
 
   // ============== REVEAL ON SCROLL ==============
   const revealElements = document.querySelectorAll(
-    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table'
+    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table, .map-card, .memory-card, .weather-tip, .weather-chart-wrap, .memory-finale, .day-route-svg'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));

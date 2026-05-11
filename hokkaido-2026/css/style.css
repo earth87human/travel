@@ -1897,3 +1897,466 @@ img {
     font-size: 0.95rem;
   }
 }
+
+/* ===================================================
+   NEW MODULES · ADDED IN v2.1
+=================================================== */
+
+/* ============== DAY ROUTE SVG (per day card) ============== */
+.day-route-svg {
+  margin: 0 0 28px;
+  padding: 16px 8px 8px;
+  background: linear-gradient(180deg, var(--cream) 0%, rgba(245, 241, 234, 0.3) 100%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.day-route-svg svg {
+  width: 100%;
+  height: auto;
+  max-height: 90px;
+  display: block;
+}
+
+.day-route-svg svg text {
+  letter-spacing: 0.05em;
+}
+
+/* ============== MAPS SECTION ============== */
+.section-maps {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 140px 0;
+}
+
+.maps-intro {
+  text-align: center;
+  font-family: var(--font-tc-serif);
+  font-size: 1.2rem;
+  line-height: 1.85;
+  max-width: 760px;
+  margin: 0 auto 80px;
+  color: rgba(245, 241, 234, 0.85);
+  font-weight: 300;
+}
+
+.maps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.map-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 117, 0.15);
+  overflow: hidden;
+  transition: all 0.4s var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-card:hover {
+  border-color: var(--copper);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.map-frame {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: var(--navy-light);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.25) contrast(0.95) saturate(0.85);
+  transition: filter 0.4s var(--transition);
+}
+
+.map-card:hover .map-frame iframe {
+  filter: grayscale(0) contrast(1) saturate(1);
+}
+
+.map-info {
+  padding: 28px 28px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--copper);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.map-info h4 {
+  font-family: var(--font-tc-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.map-info p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(245, 241, 234, 0.75);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.map-coord {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--copper);
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 168, 117, 0.15);
+}
+
+/* ============== WEATHER SECTION ============== */
+.section-weather {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 117, 0.1);
+}
+
+.weather-intro {
+  text-align: center;
+  font-family: var(--font-tc-serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  max-width: 760px;
+  margin: 0 auto 60px;
+  color: rgba(245, 241, 234, 0.85);
+  font-weight: 300;
+}
+
+.weather-chart-wrap {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 117, 0.15);
+  padding: 40px 32px 24px;
+  margin-bottom: 60px;
+}
+
+.weather-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.weather-bar rect {
+  transition: opacity 0.3s var(--transition);
+}
+
+.weather-bar:hover rect {
+  opacity: 1;
+  filter: brightness(1.15);
+}
+
+.weather-tips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.weather-tip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 117, 0.15);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s var(--transition);
+}
+
+.weather-tip:hover {
+  border-color: var(--copper);
+  background: rgba(201, 168, 117, 0.06);
+}
+
+.tip-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  filter: grayscale(0.1);
+}
+
+.weather-tip h5 {
+  font-family: var(--font-tc-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--copper);
+  margin-bottom: 12px;
+}
+
+.weather-tip p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(245, 241, 234, 0.75);
+}
+
+/* ============== MEMORY SECTION ============== */
+.section-memory {
+  background: var(--cream-dark);
+  padding: 140px 0;
+}
+
+.memory-intro {
+  text-align: center;
+  font-family: var(--font-tc-serif);
+  font-size: 1.15rem;
+  line-height: 1.95;
+  max-width: 820px;
+  margin: 0 auto 80px;
+  color: var(--charcoal);
+  font-weight: 400;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 100px;
+}
+
+.memory-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.5s var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s var(--transition);
+}
+
+.memory-card:hover::before {
+  transform: scaleX(1);
+}
+
+.memory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(26, 35, 50, 0.1);
+}
+
+.memory-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--copper);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  color: var(--copper);
+  background: var(--cream);
+  transition: all 0.4s var(--transition);
+}
+
+.memory-card:hover .memory-icon {
+  background: var(--copper);
+  color: var(--white);
+  transform: rotate(8deg);
+}
+
+.memory-cat {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--copper-dark);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.memory-card h4 {
+  font-family: var(--font-tc-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.memory-jp {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--grey);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.memory-card > p:not(.memory-jp) {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.memory-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 20px;
+  border-top: 1px solid var(--cream-dark);
+  margin-top: auto;
+}
+
+.memory-price {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--copper-dark);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.memory-buy {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.memory-finale {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 40px;
+  background: var(--white);
+  border-top: 3px solid var(--copper);
+  position: relative;
+}
+
+.memory-finale::before {
+  content: '"';
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  color: var(--copper);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.memory-finale h3 {
+  font-family: var(--font-tc-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  margin-bottom: 28px;
+  line-height: 1.4;
+}
+
+.memory-finale p {
+  font-family: var(--font-tc-serif);
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.memory-finale p:last-child {
+  color: var(--copper-dark);
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 32px;
+}
+
+/* ============== RESPONSIVE FOR NEW MODULES ============== */
+@media (max-width: 1024px) {
+  .maps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-tips {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-maps,
+  .section-weather,
+  .section-memory {
+    padding: 100px 0;
+  }
+
+  .weather-chart-wrap {
+    padding: 24px 16px 16px;
+    overflow-x: auto;
+  }
+
+  .day-route-svg {
+    padding: 12px 4px 6px;
+  }
+
+  .day-route-svg svg {
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .maps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-tips {
+    grid-template-columns: 1fr;
+  }
+
+  .map-frame {
+    height: 220px;
+  }
+
+  .memory-finale {
+    padding: 48px 28px;
+  }
+
+  .memory-finale h3 {
+    font-size: 1.3rem;
+  }
+
+  .weather-chart-wrap {
+    padding: 16px 8px;
+  }
+
+  .section-maps,
+  .section-weather,
+  .section-memory {
+    padding: 80px 0;
+  }
+}
+
