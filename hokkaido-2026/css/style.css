@@ -2360,3 +2360,145 @@ img {
   }
 }
 
+/* ===================================================
+   MOBILE-SPECIFIC POLISH · v2.3
+   保持 SVG 圖表文字可讀，並改善小螢幕細節
+=================================================== */
+@media (max-width: 768px) {
+  /* === 每日路線 SVG：避免文字縮太小 === */
+  .day-route-svg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding: 12px 4px 6px;
+  }
+
+  .day-route-svg svg {
+    min-width: 480px;
+    max-height: none;
+    height: auto;
+  }
+
+  .day-route-svg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(to right, transparent, var(--white));
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* === 天氣圖表：避免文字縮太小 === */
+  .weather-chart-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .weather-chart {
+    min-width: 680px;
+  }
+
+  .weather-chart-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 32px;
+    background: linear-gradient(to right, transparent, var(--navy));
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* === 預算表：在小螢幕保留說明欄但縮小字 === */
+  .budget-row {
+    grid-template-columns: 1fr 130px;
+    gap: 12px;
+    padding: 18px 18px;
+  }
+
+  .b-item {
+    font-size: 0.95rem;
+  }
+
+  .b-price {
+    font-size: 0.9rem;
+  }
+
+  /* === 紀念品卡：4 個圖標讓間距更舒適 === */
+  .memory-card {
+    padding: 32px 24px;
+  }
+
+  /* === 路線概覽：直向時不靠 top:-24 偏移 === */
+  .route-flow {
+    gap: 0;
+  }
+
+  .route-stop {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .route-dot,
+  .route-name,
+  .route-sub {
+    position: static;
+    top: auto;
+  }
+
+  .route-dot {
+    margin: 0 auto 8px;
+  }
+
+  .route-line {
+    margin: 0 auto;
+  }
+
+  /* === 導覽列開啟時：避免太長超出畫面 === */
+  .nav-menu.open {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: 24px 32px;
+    gap: 16px;
+  }
+
+  /* === Hero meta：手機上更緊湊 === */
+  .hero-meta {
+    padding: 20px 32px;
+    margin-bottom: 40px;
+  }
+
+  /* === 各章節標題在手機更小 === */
+  .section-header {
+    margin-bottom: 56px;
+  }
+}
+
+/* iPhone SE 與更小裝置（< 375px） */
+@media (max-width: 374px) {
+  .day-route-svg svg {
+    min-width: 440px;
+  }
+
+  .title-jp {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .meta-value {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+}
+
