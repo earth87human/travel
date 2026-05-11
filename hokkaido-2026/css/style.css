@@ -2064,6 +2064,11 @@ img {
   display: block;
 }
 
+/* 預設隱藏滑動提示，只有手機顯示 */
+.scroll-hint {
+  display: none;
+}
+
 .weather-bar rect {
   transition: opacity 0.3s var(--transition);
 }
@@ -2377,9 +2382,10 @@ img {
 
 /* === Hero 區關鍵修正 (適用所有手機/平板) === */
 @media (max-width: 1024px) {
-  /* 改成從頂部開始排，避免 align-items:center 把內容推到 nav 後面 */
+  /* 改用 min-height 讓 hero 可隨內容自然延伸，避免 CTA 被擠出 viewport */
   .hero {
-    min-height: 600px;
+    height: auto;
+    min-height: 100vh;
     padding-top: 100px;
     padding-bottom: 60px;
   }
@@ -2405,37 +2411,17 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  /* === 每日路線 SVG：避免文字縮太小 === */
+  /* === 每日路線 SVG：手機上隱藏避免裁切，路徑用 day-route 文字呈現即可 === */
   .day-route-svg {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-    padding: 12px 4px 6px;
+    display: none;
   }
 
-  .day-route-svg svg {
-    min-width: 480px;
-    max-height: none;
-    height: auto;
-  }
-
-  .day-route-svg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 24px;
-    background: linear-gradient(to right, transparent, var(--white));
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  /* === 天氣圖表：避免文字縮太小 === */
+  /* === 天氣圖表：可橫向捲動 === */
   .weather-chart-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -2446,16 +2432,18 @@ img {
     min-width: 680px;
   }
 
-  .weather-chart-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 32px;
-    background: linear-gradient(to right, transparent, var(--navy));
-    pointer-events: none;
-    z-index: 2;
+  /* 在 chart 上方加上滑動提示 */
+  .scroll-hint {
+    display: block;
+    text-align: center;
+    color: var(--copper);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    padding: 0 0 14px;
+    margin: 0;
+    position: sticky;
+    left: 0;
+    background: transparent;
   }
 
   /* === 預算表：在小螢幕保留說明欄但縮小字 === */
