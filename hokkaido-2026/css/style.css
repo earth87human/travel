@@ -606,8 +606,10 @@ img {
 /* Route Map */
 .route-map {
   background: var(--white);
-  padding: 80px 60px;
+  padding: 60px 56px;
   border: 1px solid var(--cream-dark);
+  max-width: 880px;
+  margin: 0 auto;
 }
 
 .route-title {
@@ -2715,5 +2717,511 @@ img {
   .container {
     padding: 0 14px;
   }
+}
+
+/* ============== ROUTE ILLUSTRATION (Overview) ============== */
+.route-illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.route-map-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.route-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.route-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--grey);
+}
+
+.legend-line {
+  display: inline-block;
+  width: 28px;
+  border-top: 2.6px solid var(--copper);
+}
+
+.legend-air {
+  border-top: 2px dashed #d98b6a;
+}
+
+.legend-jr {
+  border-top: 2px dashed #88a98a;
+}
+
+.distances-title {
+  font-family: var(--font-tc-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--navy);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--copper);
+}
+
+.distance-list {
+  list-style: none;
+}
+
+.distance-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.dist-leg {
+  font-family: var(--font-tc-serif);
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+
+.dist-val {
+  font-size: 0.82rem;
+  color: var(--copper-dark);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.distance-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--font-tc-serif);
+  letter-spacing: 0.08em;
+}
+
+.distance-total span:last-child {
+  color: var(--copper);
+}
+
+/* ============== CULTURE & HISTORY ============== */
+.section-culture {
+  background: var(--cream);
+}
+
+.culture-intro {
+  text-align: center;
+  font-family: var(--font-tc-serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  max-width: 780px;
+  margin: 0 auto 72px;
+  color: var(--charcoal);
+  font-weight: 300;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.culture-romaji {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  color: var(--copper-dark);
+  margin-bottom: 10px;
+}
+
+.culture-card h3 {
+  margin-bottom: 16px;
+}
+
+/* ====== ROUTE ILLUSTRATION + CULTURE — RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .route-illustration {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-legend {
+    gap: 20px;
+  }
+}
+
+/* ====== ROUTE MAP — real basemap ====== */
+.route-mapbox {
+  position: relative;
+  border: 1px solid var(--cream-dark);
+  background: #dfe7ea;
+  overflow: hidden;
+}
+
+.route-mapbox img {
+  display: block;
+  width: 100%;
+}
+
+.route-mapbox.no-img {
+  aspect-ratio: 247 / 153;
+}
+
+.route-ovl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.route-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  background: var(--copper);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(26, 35, 50, 0.45);
+}
+
+.legend-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--copper);
+  color: #fff;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ====== ROUTE MAP — bigger + refined city labels ====== */
+.route-mapbox {
+  width: 100%;
+}
+
+.route-distances {
+  width: 100%;
+  max-width: 540px;
+}
+
+.route-pt {
+  position: absolute;
+}
+
+.rp-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  transform: translate(-50%, -50%);
+  background: var(--copper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(245, 241, 234, 0.9), 0 1px 3px rgba(26, 35, 50, 0.45);
+}
+
+.route-pt--cap .rp-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--navy);
+  box-shadow: 0 0 0 3px rgba(245, 241, 234, 0.95), 0 0 0 5px var(--copper), 0 1px 3px rgba(26, 35, 50, 0.45);
+}
+
+.rp-name {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: var(--font-tc-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: rgba(245, 241, 234, 0.82);
+  padding: 1px 6px;
+}
+
+.route-pt--l .rp-name {
+  right: 11px;
+  text-align: right;
+}
+
+.route-pt--r .rp-name {
+  left: 11px;
+}
+
+/* ====== ROUTE TIMELINE — refined numbered itinerary ====== */
+.route-timeline {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.rt-item {
+  display: flex;
+  gap: 22px;
+}
+
+.rt-rail {
+  position: relative;
+  width: 44px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.rt-rail::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: var(--cream-dark);
+}
+
+.rt-item:last-child .rt-rail::before {
+  bottom: auto;
+  height: 21px;
+}
+
+.rt-marker {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rt-air-mk {
+  background: var(--cream);
+  border: 1.5px solid var(--copper);
+}
+
+.rt-air-mk::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--copper);
+}
+
+.rt-body {
+  flex: 1;
+  padding-bottom: 28px;
+}
+
+.rt-item:last-child .rt-body {
+  padding-bottom: 0;
+}
+
+.rt-name {
+  display: block;
+  font-family: var(--font-tc-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.rt-meta {
+  display: block;
+  font-size: 0.73rem;
+  letter-spacing: 0.16em;
+  color: var(--copper-dark);
+  margin-top: 4px;
+}
+
+.rt-leg .rt-body {
+  padding: 4px 0 28px;
+}
+
+.rt-leg-text {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--grey);
+}
+
+.rt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 560px;
+  margin: 14px auto 0;
+  padding: 18px 26px;
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.rt-total-label {
+  font-family: var(--font-tc-serif);
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+.rt-total-val {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--copper);
+}
+
+@media (max-width: 600px) {
+  .rt-item { gap: 16px; }
+  .rt-rail { width: 38px; }
+  .rt-marker { width: 36px; height: 36px; font-size: 1.05rem; }
+  .rt-name { font-size: 1.08rem; }
+  .rt-item:last-child .rt-rail::before { height: 18px; }
+}
+
+/* ====== ROUTE FIGURE — Hokkaido map (context) ====== */
+.route-figure {
+  position: relative;
+  margin-bottom: 46px;
+  border: 1px solid var(--cream-dark);
+  background: #e8eef0;
+}
+
+.route-figure img {
+  display: block;
+  width: 100%;
+}
+
+.route-figure.no-img {
+  aspect-ratio: 247 / 153;
+}
+
+.route-here {
+  position: absolute;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.route-here-dot {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--copper);
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 4px rgba(201, 168, 117, 0.35), 0 1px 4px rgba(26, 35, 50, 0.4);
+}
+
+.route-here-label {
+  font-family: var(--font-tc-serif);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  background: rgba(245, 241, 234, 0.85);
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .route-here-label { font-size: 0.68rem; }
+}
+
+/* ====== TABIRAI 訂車步驟 ====== */
+.book-steps {
+  counter-reset: bk;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.book-steps li {
+  counter-increment: bk;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+}
+
+.book-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.book-steps li::before {
+  content: counter(bk);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 25px;
+  height: 25px;
+  background: var(--navy);
+  color: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-family: var(--font-serif);
+}
+
+.book-steps li strong {
+  font-family: var(--font-tc-serif);
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* full-width note card (§09 餐廳須知) */
+.note-card-wide {
+  grid-column: 1 / -1;
 }
 

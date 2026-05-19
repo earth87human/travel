@@ -199,6 +199,6 @@
 
   // ============== CONSOLE GREETING ==============
   console.log('%cHokkaido Journey · 2026', 'font-family: serif; font-size: 24px; color: #c9a875; padding: 16px;');
-  console.log('%c旭岳溫泉 × 支笏湖 · 六日五夜放空之旅', 'font-family: serif; font-size: 14px; color: #1a2332;');
+  console.log('%c白老 × 支笏湖 · 五日四夜美食溫泉之旅', 'font-family: serif; font-size: 14px; color: #1a2332;');
 
 })();
