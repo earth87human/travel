@@ -1,5 +1,5 @@
 /* ===================================================
-   Hokkaido Journey · Interactions
+   Kansai × Hokkaido Journey · Interactions
 =================================================== */
 
 (function() {
@@ -82,7 +82,7 @@
 
   // ============== REVEAL ON SCROLL ==============
   const revealElements = document.querySelectorAll(
-    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table, .map-card, .memory-card, .weather-tip, .weather-chart-wrap, .memory-finale, .day-route-svg'
+    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table, .map-card, .memory-card, .weather-tip, .weather-chart-wrap, .memory-finale, .day-route-svg, .chapter-cover-inner, .chapter-label, .interlude'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
@@ -198,7 +198,7 @@
   });
 
   // ============== CONSOLE GREETING ==============
-  console.log('%cHokkaido Journey · 2026', 'font-family: serif; font-size: 24px; color: #c9a875; padding: 16px;');
-  console.log('%c白老 × 支笏湖 · 五日四夜美食溫泉之旅', 'font-family: serif; font-size: 14px; color: #1a2332;');
+  console.log('%cKansai \u00d7 Hokkaido Journey · 2026', 'font-family: serif; font-size: 24px; color: #c9a875; padding: 16px;');
+  console.log('%c京都・嵐山・大阪 × 支笏湖・白老 · 九日雙章家族之旅', 'font-family: serif; font-size: 14px; color: #1a2332;');
 
 })();

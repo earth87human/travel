@@ -2431,7 +2431,7 @@ img {
   }
 
   .weather-chart {
-    min-width: 680px;
+    min-width: 1080px;
   }
 
   /* 在 chart 上方加上滑動提示 */
@@ -3225,3 +3225,308 @@ img {
   grid-column: 1 / -1;
 }
 
+
+/* ============================================================
+   CHAPTER SYSTEM（關西 × 北海道 雙章）
+   ============================================================ */
+
+/* ---- 章名頁：hero 的縮小版，深色滿版 ---- */
+.chapter-cover {
+  position: relative;
+  padding: 120px 0;
+  background: var(--navy);
+  overflow: hidden;
+  text-align: center;
+}
+
+.chapter-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201, 168, 117, 0.14), transparent 62%);
+  pointer-events: none;
+}
+
+.chapter-cover-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.chapter-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.chapter-eyebrow .line {
+  width: 60px;
+  height: 1px;
+  background: rgba(201, 168, 117, 0.5);
+}
+
+.chapter-eyebrow span:not(.line) {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--copper);
+  font-weight: 500;
+}
+
+.chapter-name-jp {
+  display: block;
+  font-family: var(--font-tc-serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  color: var(--cream);
+  margin-bottom: 14px;
+}
+
+.chapter-name-en {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.6em;
+  color: var(--copper);
+  margin-bottom: 30px;
+}
+
+.chapter-tagline {
+  font-family: var(--font-tc-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: rgba(245, 241, 234, 0.82);
+  max-width: 620px;
+  margin: 0 auto 40px;
+  line-height: 2;
+}
+
+.chapter-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.chapter-meta .meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chapter-meta .meta-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: rgba(245, 241, 234, 0.5);
+}
+
+.chapter-meta .meta-value {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  color: var(--cream);
+}
+
+.chapter-meta .meta-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(201, 168, 117, 0.35);
+}
+
+/* ---- 章節分組小標：用在跨章的共通 section 內 ---- */
+.chapter-label {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 56px;
+}
+
+.chapter-label:not(:first-child) {
+  margin-top: 100px;
+}
+
+.chapter-label::before,
+.chapter-label::after {
+  content: '';
+  height: 1px;
+  background: var(--cream-dark);
+  flex: 1;
+}
+
+.chapter-label span {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  color: var(--copper-dark);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.chapter-label strong {
+  font-family: var(--font-tc-serif);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--navy);
+  margin-right: 12px;
+}
+
+/* 深底 section（地圖／天氣／預算）上的分組小標 */
+.section-maps .chapter-label::before,
+.section-maps .chapter-label::after,
+.section-weather .chapter-label::before,
+.section-weather .chapter-label::after,
+.section-budget .chapter-label::before,
+.section-budget .chapter-label::after {
+  background: rgba(201, 168, 117, 0.25);
+}
+
+.section-maps .chapter-label strong,
+.section-weather .chapter-label strong,
+.section-budget .chapter-label strong {
+  color: var(--cream);
+}
+
+.section-maps .chapter-label span,
+.section-weather .chapter-label span,
+.section-budget .chapter-label span {
+  color: var(--copper-light);
+}
+
+/* ---- 轉場：10/1 會合日 ---- */
+.section-interlude {
+  background: var(--cream-dark);
+  padding: 110px 0;
+}
+
+.interlude {
+  max-width: 940px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--copper);
+  border-top: 3px solid var(--copper);
+  padding: 56px 60px;
+  position: relative;
+}
+
+.interlude-eyebrow {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: var(--copper-dark);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.interlude h3 {
+  font-family: var(--font-tc-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.interlude-sub {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  color: var(--grey);
+  margin-bottom: 40px;
+}
+
+.interlude-svg {
+  margin: 0 auto 40px;
+  max-width: 720px;
+}
+
+.interlude-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.interlude .day-schedule {
+  margin-bottom: 32px;
+}
+
+.interlude-foot {
+  border-top: 1px solid var(--cream-dark);
+  padding-top: 24px;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--charcoal);
+}
+
+/* ---- 住宿佔位卡（關西住宿尚未決定）---- */
+/* 保留與其他住宿卡相同的深色底，只把內容換成「尚未預訂」的框 */
+.hotel-card.tbd .hotel-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotel-card.tbd .hotel-img::after {
+  content: 'TO BE BOOKED';
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.4em;
+  color: var(--copper);
+  border: 1px dashed rgba(201, 168, 117, 0.45);
+  padding: 20px 30px;
+}
+
+/* ---- 響應式 ---- */
+@media (max-width: 1024px) {
+  .chapter-cover { padding: 90px 0; }
+  .chapter-name-jp { font-size: 2.6rem; }
+  .interlude { padding: 44px 36px; }
+  .chapter-label { margin-bottom: 40px; gap: 16px; }
+  .chapter-label:not(:first-child) { margin-top: 72px; }
+}
+
+@media (max-width: 600px) {
+  .chapter-cover { padding: 70px 0; }
+  .chapter-name-jp { font-size: 2rem; letter-spacing: 0.2em; }
+  .chapter-name-en { font-size: 0.72rem; letter-spacing: 0.36em; }
+  .chapter-eyebrow { gap: 12px; margin-bottom: 22px; }
+  .chapter-eyebrow .line { width: 28px; }
+  .chapter-eyebrow span:not(.line) { font-size: 0.62rem; letter-spacing: 0.28em; }
+  .chapter-tagline { font-size: 0.92rem; line-height: 1.9; margin-bottom: 28px; }
+  .chapter-meta { gap: 16px; }
+  .chapter-meta .meta-divider { display: none; }
+  .chapter-meta .meta-value { font-size: 0.98rem; }
+  .section-interlude { padding: 70px 0; }
+  .interlude { padding: 32px 20px; border-top-width: 2px; }
+  .interlude h3 { font-size: 1.4rem; }
+  .interlude-sub { font-size: 0.82rem; margin-bottom: 26px; }
+  .chapter-label { flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .chapter-label:not(:first-child) { margin-top: 56px; }
+  .chapter-label span { font-size: 0.7rem; letter-spacing: 0.28em; }
+}
+
+/* 雙章品牌字串：字較長，縮排版 */
+.loader-text {
+  font-size: clamp(1.05rem, 4.4vw, 2.1rem);
+  letter-spacing: 0.36em;
+  white-space: nowrap;
+}
+
+.logo-mark {
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .logo-text { font-size: 0.86rem; letter-spacing: 0.08em; }
+}
+
+.footer-mark { font-size: 1rem; letter-spacing: 0.02em; }
