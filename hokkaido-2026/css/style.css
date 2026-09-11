@@ -42,7 +42,7 @@ body {
   color: var(--charcoal);
   line-height: 1.65;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
@@ -802,7 +802,6 @@ img {
   border: 1px solid var(--cream-dark);
   transition: all 0.4s var(--transition);
   position: relative;
-  overflow: hidden;
 }
 
 .day-card::before {
@@ -958,10 +957,13 @@ img {
 }
 
 .day-image {
-  position: relative;
+  position: sticky;
+  top: 96px;
+  align-self: start;
   overflow: hidden;
   background: var(--cream-dark);
-  min-height: 280px;
+  aspect-ratio: 4 / 5;
+  max-height: 72vh;
 }
 
 .day-image img {
@@ -994,7 +996,6 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--white);
-  overflow: hidden;
   transition: all 0.4s var(--transition);
   border: 1px solid var(--cream-dark);
 }
@@ -1012,8 +1013,11 @@ img {
 }
 
 .hotel-img {
-  position: relative;
-  min-height: 480px;
+  position: sticky;
+  top: 96px;
+  align-self: start;
+  aspect-ratio: 4 / 5;
+  max-height: 78vh;
   overflow: hidden;
   background: linear-gradient(135deg, var(--navy-light), var(--navy));
 }
@@ -1691,7 +1695,9 @@ img {
   }
 
   .hotel-img {
-    min-height: 360px;
+    position: static;
+    aspect-ratio: 16 / 9;
+    max-height: none;
   }
 
   .hotel-body {
@@ -1724,7 +1730,9 @@ img {
   }
 
   .day-image {
-    min-height: 240px;
+    position: static;
+    aspect-ratio: 16 / 9;
+    max-height: none;
   }
 
   .food-gallery {
