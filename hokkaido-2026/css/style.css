@@ -1191,7 +1191,7 @@ img {
   left: 0;
   right: 0;
   padding: 32px;
-  background: linear-gradient(180deg, transparent 0%, rgba(26, 35, 50, 0.85) 50%, rgba(26, 35, 50, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(26, 35, 50, 0) 0%, rgba(26, 35, 50, 0.82) 18%, rgba(26, 35, 50, 0.94) 42%, rgba(26, 35, 50, 0.97) 100%);
   transform: translateY(20px);
   opacity: 0.85;
   transition: all 0.4s var(--transition);
