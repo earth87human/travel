@@ -1181,10 +1181,12 @@ img {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, var(--navy-light), var(--navy));
+  z-index: 0;
 }
 
 .food-info {
   position: absolute;
+  z-index: 1;
   bottom: 0;
   left: 0;
   right: 0;
