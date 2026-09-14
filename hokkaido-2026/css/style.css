@@ -1169,6 +1169,10 @@ img {
   grid-row: span 2;
 }
 
+.food-item.food-wide {
+  grid-column: span 2;
+}
+
 .food-item img {
   width: 100%;
   height: 100%;
@@ -1890,6 +1894,10 @@ img {
   .food-item.food-large {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .food-item.food-wide {
+    grid-column: span 1;
   }
 
   .budget-value {
