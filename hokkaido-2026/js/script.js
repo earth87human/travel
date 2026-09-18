@@ -82,7 +82,7 @@
 
   // ============== REVEAL ON SCROLL ==============
   const revealElements = document.querySelectorAll(
-    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table, .map-card, .memory-card, .weather-tip, .weather-chart-wrap, .memory-finale, .day-route-svg, .chapter-cover-inner, .chapter-label, .interlude'
+    '.day-card, .highlight-card, .hotel-card, .note-card, .food-item, .timeline-item, .stat, .overview-text, .overview-stats, .route-map, .budget-summary, .budget-table, .map-card, .chome-card, .chome-axis, .chome-plan, .memory-card, .weather-tip, .weather-chart-wrap, .memory-finale, .day-route-svg, .chapter-cover-inner, .chapter-label, .interlude'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
