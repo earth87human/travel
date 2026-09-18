@@ -3548,3 +3548,628 @@ img {
 }
 
 .footer-mark { font-size: 1rem; letter-spacing: 0.02em; }
+
+/* ============================================================
+   オータムフェスト 丁目攻略（大通公園・秋季豐收祭）
+   ============================================================ */
+
+.section-chome {
+  background: var(--cream);
+  padding: 140px 0;
+}
+
+.chome-intro {
+  text-align: center;
+  font-family: var(--font-tc-serif);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 840px;
+  margin: 0 auto 18px;
+  color: var(--charcoal);
+  font-weight: 300;
+}
+
+.chome-datastate {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  color: var(--copper-dark);
+  margin-bottom: 70px;
+}
+
+.chome-datastate b {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+}
+
+/* ---- 會場軸線 ---- */
+.chome-axis {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-top: 3px solid var(--copper);
+  padding: 34px 38px 30px;
+  margin-bottom: 72px;
+}
+
+.chome-axis-head {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.chome-axis-end {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.chome-axis-end b {
+  font-family: var(--font-tc-serif);
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--navy);
+}
+
+.chome-axis-end small {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--grey);
+}
+
+.chome-axis-end.to-right {
+  text-align: right;
+}
+
+.chome-axis-rail {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--copper), var(--cream-dark));
+  position: relative;
+}
+
+.chome-axis-rail::after {
+  content: '約 1 km · 全程步行';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+.chome-strip {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  padding-bottom: 6px;
+}
+
+.chome-node {
+  scroll-snap-align: start;
+}
+
+.chome-node {
+  flex: 1 1 0;
+  min-width: 82px;
+}
+
+.chome-node > a,
+.chome-node > span {
+  display: block;
+  text-align: center;
+  padding: 14px 6px 12px;
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  text-decoration: none;
+  transition: all 0.3s var(--transition);
+  height: 100%;
+}
+
+.chome-node > a:hover {
+  background: var(--white);
+  border-color: var(--copper);
+  transform: translateY(-3px);
+}
+
+.node-no {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--navy);
+}
+
+.node-no::after {
+  content: '丁目';
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  letter-spacing: 0.16em;
+  color: var(--grey);
+  margin-left: 3px;
+  vertical-align: 3px;
+}
+
+.node-theme {
+  display: block;
+  margin-top: 7px;
+  font-size: 0.66rem;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  color: var(--grey);
+}
+
+.chome-node > a:hover .node-theme {
+  color: var(--copper-dark);
+}
+
+.chome-node.is-off > span {
+  border-style: dashed;
+  background: transparent;
+  opacity: 0.45;
+}
+
+.chome-node.is-pending .node-theme {
+  font-style: italic;
+}
+
+/* ---- 丁目卡片 ---- */
+.chome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 26px;
+}
+
+.chome-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-top: 3px solid var(--copper);
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 110px;
+  transition: box-shadow 0.4s var(--transition);
+}
+
+.chome-card:hover {
+  box-shadow: 0 18px 44px rgba(26, 35, 50, 0.08);
+}
+
+.chome-card.is-pending {
+  background: rgba(255, 255, 255, 0.5);
+  border-style: dashed;
+  border-top: 3px dashed var(--grey-light);
+}
+
+.chome-card-head {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--cream-dark);
+  margin-bottom: 20px;
+}
+
+.chome-no {
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 2.9rem;
+  font-weight: 300;
+  line-height: 0.9;
+  color: var(--copper);
+  text-align: center;
+}
+
+.chome-card.is-pending .chome-no {
+  color: var(--grey-light);
+}
+
+.chome-no small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 0.3em;
+  color: var(--grey);
+  margin-top: 6px;
+}
+
+.chome-title h3 {
+  font-family: var(--font-tc-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.chome-theme {
+  font-size: 0.87rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+}
+
+.chome-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px 20px;
+  margin-bottom: 22px;
+}
+
+.chome-facts > div {
+  display: flex;
+  gap: 10px;
+  font-size: 0.79rem;
+  line-height: 1.7;
+}
+
+.chome-facts dt {
+  flex: 0 0 42px;
+  letter-spacing: 0.16em;
+  color: var(--copper-dark);
+  font-weight: 500;
+}
+
+.chome-facts dd {
+  color: var(--charcoal);
+}
+
+.chome-eat h4,
+.chome-all summary {
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  color: var(--copper-dark);
+  font-weight: 500;
+}
+
+.chome-eat h4 {
+  margin-bottom: 13px;
+}
+
+.chome-eat h4::before {
+  content: '— ';
+}
+
+.chome-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-dark);
+  margin-bottom: 18px;
+}
+
+.chome-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 14px;
+  align-items: baseline;
+  background: var(--white);
+  padding: 11px 14px;
+}
+
+.eat-stall {
+  grid-column: 1 / -1;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--grey);
+}
+
+.eat-dish {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.eat-price {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.chome-list li.is-pick {
+  background: #fdfaf3;
+  box-shadow: inset 3px 0 0 var(--copper);
+}
+
+.chome-list li.is-avoid {
+  background: #fbf7f7;
+  box-shadow: inset 3px 0 0 #c0736a;
+}
+
+.chome-list li.is-avoid .eat-dish {
+  color: var(--grey);
+}
+
+.chome-list li.is-empty {
+  color: var(--grey);
+  font-style: italic;
+  font-size: 0.82rem;
+  display: block;
+  text-align: center;
+  padding: 20px 14px;
+}
+
+/* 完整攤位表（收合） */
+.chome-all {
+  border-top: 1px solid var(--cream-dark);
+  padding-top: 14px;
+  margin-bottom: 18px;
+}
+
+.chome-all summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 4px 0;
+}
+
+.chome-all summary::-webkit-details-marker {
+  display: none;
+}
+
+.chome-all summary::before {
+  content: '＋ ';
+  color: var(--copper);
+}
+
+.chome-all[open] summary::before {
+  content: '− ';
+}
+
+.chome-all-list {
+  list-style: none;
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-dark);
+}
+
+.chome-all-list li {
+  background: var(--white);
+  padding: 9px 12px;
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
+.chome-all-list .an {
+  display: block;
+  color: var(--grey);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.chome-all-list .ad {
+  color: var(--charcoal);
+}
+
+.chome-all-list li.raw {
+  box-shadow: inset 3px 0 0 #c0736a;
+}
+
+.chome-all-list li.raw .ad::after {
+  content: ' ⚠';
+  color: #c0736a;
+}
+
+.chome-all-list li.star {
+  background: #fdfaf3;
+  box-shadow: inset 3px 0 0 var(--copper);
+}
+
+.chome-all-list .ap {
+  font-family: var(--font-serif);
+  color: var(--navy);
+  margin-left: 4px;
+}
+
+.chome-perks {
+  list-style: none;
+  background: #f4f7f5;
+  border-left: 3px solid var(--sage);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.chome-perks li {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: #3f5a4f;
+}
+
+.chome-perks b {
+  color: #2f4a3e;
+  font-weight: 600;
+}
+
+.chome-warn {
+  font-size: 0.8rem;
+  line-height: 1.85;
+  color: #8a5233;
+  background: #fdf3ea;
+  border-left: 3px solid #c98c5e;
+  padding: 11px 15px;
+  margin-bottom: 16px;
+}
+
+.chome-verdict {
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid var(--cream-dark);
+  font-size: 0.85rem;
+  line-height: 1.85;
+  color: var(--navy);
+}
+
+.chome-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  padding: 4px 10px;
+  border: 1px solid var(--copper);
+  color: var(--copper-dark);
+  margin-right: 10px;
+  vertical-align: 2px;
+  white-space: nowrap;
+}
+
+.chome-badge.go {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--white);
+}
+
+.chome-badge.maybe {
+  border-color: var(--sage);
+  color: var(--sage);
+}
+
+.chome-badge.tbd {
+  border-style: dashed;
+  border-color: var(--grey-light);
+  color: var(--grey);
+}
+
+.pending-line {
+  color: var(--grey);
+  font-style: italic;
+}
+
+/* ---- 兩晚動線 ---- */
+.chome-plan {
+  margin-top: 78px;
+  background: var(--navy);
+  color: var(--cream);
+  padding: 50px 54px 44px;
+  border-top: 3px solid var(--copper);
+}
+
+.plan-eyebrow {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--copper);
+  margin-bottom: 14px;
+}
+
+.chome-plan h3 {
+  font-family: var(--font-tc-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  margin-bottom: 34px;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.plan-col {
+  border-left: 1px solid rgba(201, 168, 117, 0.3);
+  padding-left: 26px;
+}
+
+.plan-night {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  color: var(--copper-light);
+  margin-bottom: 16px;
+}
+
+.plan-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plan-steps li {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(245, 241, 234, 0.88);
+}
+
+.step-time {
+  flex: 0 0 52px;
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: var(--copper);
+}
+
+.plan-steps .pending-line {
+  color: rgba(245, 241, 234, 0.42);
+}
+
+.plan-foot {
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(201, 168, 117, 0.25);
+  font-size: 0.83rem;
+  line-height: 1.95;
+  color: rgba(245, 241, 234, 0.78);
+}
+
+.plan-foot strong {
+  color: var(--copper-light);
+  font-weight: 500;
+}
+
+/* ---- 響應式 ---- */
+@media (max-width: 1024px) {
+  .section-chome { padding: 100px 0; }
+  .chome-grid { grid-template-columns: 1fr; }
+  .chome-axis { padding: 26px 22px 24px; }
+  .chome-plan { padding: 40px 32px 34px; }
+  .plan-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 600px) {
+  .section-chome { padding: 76px 0; }
+  .chome-intro { font-size: 0.95rem; line-height: 1.85; }
+  .chome-datastate { font-size: 0.66rem; letter-spacing: 0.18em; margin-bottom: 44px; }
+  .chome-axis { padding: 22px 16px 20px; margin-bottom: 48px; }
+  .chome-axis-head { gap: 12px; margin-bottom: 30px; }
+  .chome-axis-end b { font-size: 0.76rem; }
+  .chome-axis-end small { font-size: 0.62rem; }
+  .chome-axis-rail::after { font-size: 0.6rem; letter-spacing: 0.14em; }
+  .chome-node { min-width: 74px; }
+  .chome-card { padding: 24px 20px 22px; }
+  .chome-no { font-size: 2.2rem; }
+  .chome-card-head { gap: 14px; }
+  .chome-title h3 { font-size: 1.05rem; }
+  .chome-facts { grid-template-columns: 1fr; gap: 7px; }
+  .chome-all-list { grid-template-columns: 1fr; }
+  .chome-plan { margin-top: 52px; padding: 32px 20px 28px; }
+  .chome-plan h3 { font-size: 1.25rem; }
+  .plan-col { padding-left: 16px; }
+}
