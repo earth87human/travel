@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岡山・瀨戶內｜倉敷 × 五色台 × 今治 — 六日五夜自駕</title>
+<meta name="description" content="2027 岡山・瀨戶內自駕企劃 — 虎航直飛岡山、機場租車、倉敷・休暇村讃岐五色台・今治・岡山">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+  ============== 填寫說明 ==============
+  1. 這是框架版：所有「待補」都是空位，等官網原文資料再填。
+  2. 有 class="is-pending" 的卡片 / 有 class="pending" 的文字 → 填好後把 class 拿掉。
+  3. <span class="pending-badge">待補</span> 是提示標籤，填完整段後刪掉。
+  4. 目前已確定（可直接用）的資料只有：
+     - 虎航 IT214 桃園 11:10 → 岡山 14:35（1/11）、IT215 岡山 15:25 → 桃園 17:30（1/16）— 岡山機場官方時刻表
+     - 住宿：N1 倉敷國際飯店（未訂）、N2 休暇村讃岐五色台（已訂）、N3 今治國際飯店（狀態待確認）、N4-5 岡山（未選）
+  5. 圖片先不放（照片要下載確認過才用），卡片會顯示無圖底色。
+-->
+
+<!-- ============== LOADING ============== -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-text">SETOUCHI</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============== SCROLL PROGRESS ============== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============== NAVIGATION ============== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Setouchi Journey</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#overview">概覽</a></li>
+      <li><a href="#highlights">亮點</a></li>
+      <li><a href="#itinerary">行程</a></li>
+      <li><a href="#hotels">住宿</a></li>
+      <li><a href="#maps">地圖</a></li>
+      <li><a href="#food">美食</a></li>
+      <li><a href="#weather">天氣</a></li>
+      <li><a href="#notes">筆記</a></li>
+      <li><a href="#budget">預算</a></li>
+      <li><a href="#checklist">清單</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <!-- 待補：主視覺照片（下載確認過再放） -->
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      <span class="eyebrow-text">ROAD TRIP · 2027</span>
+      <span class="line"></span>
+    </div>
+    <h1 class="hero-title">
+      <span class="title-jp">瀨戶內</span>
+      <span class="title-en">SETOUCHI</span>
+    </h1>
+    <p class="hero-subtitle">岡山 × 倉敷 × 五色台 × 今治</p>
+    <p class="hero-tagline pending">待補：一句話主題</p>
+    <div class="hero-meta">
+      <div class="meta-block">
+        <span class="meta-label">出發日期</span>
+        <span class="meta-value">2027.01.11</span>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-block">
+        <span class="meta-label">返回日期</span>
+        <span class="meta-value">2027.01.16</span>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-block">
+        <span class="meta-label">同行旅人</span>
+        <span class="meta-value pending">待補</span>
+      </div>
+    </div>
+    <a href="#overview" class="hero-cta">
+      <span>開啟旅程</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+  </div>
+  <div class="hero-corner-tl">岡山桃太郎空港<br>Okayama Airport</div>
+  <div class="hero-corner-br">瀨戶內海國立公園<br>Setonaikai National Park</div>
+</header>
+
+<!-- ============== OVERVIEW ============== -->
+<section class="section section-overview" id="overview">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">行程概覽</h2>
+      <p class="section-subtitle">An Overview of Your Journey</p>
+    </div>
+
+    <div class="overview-grid">
+      <div class="overview-text">
+        <p class="lead pending">待補：旅程導言</p>
+        <p>虎航直飛岡山、岡山機場取車自駕。住宿順序：倉敷 1 晚 → 休暇村讃岐五色台 1 晚 → 今治 1 晚 → 岡山 2 晚，最後一天還車搭 15:25 班機回桃園。</p>
+        <p class="pending">待補：旅程重點說明</p>
+      </div>
+      <div class="overview-stats">
+        <div class="stat" data-value="6">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label">天五夜</span>
+        </div>
+        <div class="stat" data-value="4">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">個住宿點</span>
+        </div>
+        <div class="stat is-pending">
+          <span class="stat-num pending">—</span>
+          <span class="stat-label">待補</span>
+        </div>
+        <div class="stat is-pending">
+          <span class="stat-num pending">—</span>
+          <span class="stat-label">待補</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-map">
+      <h3 class="route-title">旅程路線</h3>
+      <div class="route-timeline">
+        <div class="rt-item rt-air">
+          <div class="rt-rail"><span class="rt-marker rt-air-mk"></span></div>
+          <div class="rt-body">
+            <span class="rt-name">桃園 ✈ 岡山</span>
+            <span class="rt-meta">DAY 1 · 虎航 IT214 11:10 → 14:35 · 機場取車</span>
+          </div>
+        </div>
+        <div class="rt-item rt-leg">
+          <div class="rt-rail"></div>
+          <div class="rt-body"><span class="rt-leg-text">開車 約 40 分</span></div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-rail"><span class="rt-marker">1</span></div>
+          <div class="rt-body">
+            <span class="rt-name">倉敷</span>
+            <span class="rt-meta">NIGHT 1 · 倉敷國際飯店（未訂）</span>
+          </div>
+        </div>
+        <div class="rt-item rt-leg">
+          <div class="rt-rail"></div>
+          <div class="rt-body"><span class="rt-leg-text pending">開車 待補</span></div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-rail"><span class="rt-marker">2</span></div>
+          <div class="rt-body">
+            <span class="rt-name">香川・五色台</span>
+            <span class="rt-meta">NIGHT 2 · 休暇村讃岐五色台（已訂）</span>
+          </div>
+        </div>
+        <div class="rt-item rt-leg">
+          <div class="rt-rail"></div>
+          <div class="rt-body"><span class="rt-leg-text pending">開車 待補</span></div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-rail"><span class="rt-marker">3</span></div>
+          <div class="rt-body">
+            <span class="rt-name">愛媛・今治</span>
+            <span class="rt-meta">NIGHT 3 · 今治國際飯店（待確認）</span>
+          </div>
+        </div>
+        <div class="rt-item rt-leg">
+          <div class="rt-rail"></div>
+          <div class="rt-body"><span class="rt-leg-text pending">開車 待補（路線待定）</span></div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-rail"><span class="rt-marker">4</span></div>
+          <div class="rt-body">
+            <span class="rt-name">岡山</span>
+            <span class="rt-meta">NIGHT 4-5 · 住宿未選</span>
+          </div>
+        </div>
+        <div class="rt-item rt-leg">
+          <div class="rt-rail"></div>
+          <div class="rt-body"><span class="rt-leg-text pending">開車到機場還車 待補</span></div>
+        </div>
+        <div class="rt-item rt-air">
+          <div class="rt-rail"><span class="rt-marker rt-air-mk"></span></div>
+          <div class="rt-body">
+            <span class="rt-name">岡山 ✈ 桃園</span>
+            <span class="rt-meta">DAY 6 · 虎航 IT215 15:25 → 17:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="rt-total">
+        <span class="rt-total-label">全程開車距離</span>
+        <span class="rt-total-val pending">待補</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HIGHLIGHTS ============== -->
+<!-- 填寫：每張卡片 = 一個亮點。數量可增減，複製整個 <article> 即可。 -->
+<section class="section section-highlights" id="highlights">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-number">02</span>
+      <h2 class="section-title">旅程亮點</h2>
+      <p class="section-subtitle">Signature Experiences</p>
+    </div>
+
+    <div class="highlights-grid">
+      <article class="highlight-card is-pending">
+        <div class="highlight-img no-img"></div>
+        <div class="highlight-body">
+          <span class="highlight-tag">01 · 待補</span>
+          <h3 class="pending">亮點名稱 待補</h3>
+          <p class="pending">說明 待補</p>
+          <span class="highlight-meta pending">補充資訊 待補</span>
+        </div>
+      </article>
+
+      <article class="highlight-card is-pending">
+        <div class="highlight-img no-img"></div>
+        <div class="highlight-body">
+          <span class="highlight-tag">02 · 待補</span>
+          <h3 class="pending">亮點名稱 待補</h3>
+          <p class="pending">說明 待補</p>
+          <span class="highlight-meta pending">補充資訊 待補</span>
+        </div>
+      </article>
+
+      <article class="highlight-card is-pending">
+        <div class="highlight-img no-img"></div>
+        <div class="highlight-body">
+          <span class="highlight-tag">03 · 待補</span>
+          <h3 class="pending">亮點名稱 待補</h3>
+          <p class="pending">說明 待補</p>
+          <span class="highlight-meta pending">補充資訊 待補</span>
+        </div>
+      </article>
+
+      <article class="highlight-card is-pending">
+        <div class="highlight-img no-img"></div>
+        <div class="highlight-body">
+          <span class="highlight-tag">04 · 待補</span>
+          <h3 class="pending">亮點名稱 待補</h3>
+          <p class="pending">說明 待補</p>
+          <span class="highlight-meta pending">補充資訊 待補</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ITINERARY ============== -->
+<!--
+  填寫：每天一張 day-card。
+  - .day-title / .day-schedule 的 time-row 待補
+  - 要標重點的 time-row 加 class="highlight"
+  - .day-route-svg 等路線定了再畫（參考 alishan-2026/index.html 的 SVG 寫法）
+-->
+<section class="section section-itinerary" id="itinerary">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">每日行程</h2>
+      <p class="section-subtitle">Day-by-Day Itinerary</p>
+    </div>
+
+    <div class="itinerary-list">
+
+      <!-- DAY 1 · 1/11（一）成人の日 -->
+      <article class="day-card is-pending" data-day="1">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">11</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">MON</span>
+          </div>
+          <div class="day-tag">Day 01</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title">抵達岡山・倉敷<span class="pending-badge">待補</span></h3>
+          <p class="day-route">桃園 ✈ 岡山機場 → 倉敷</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time">11:10</span><span class="event">桃園機場搭虎航 IT214</span></div>
+            <div class="time-row"><span class="time">14:35</span><span class="event">抵達岡山機場</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">機場租車取車 待補（租車公司、取車地點）</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">開車到倉敷（約 40 分）、倉敷國際飯店 Check-in</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag">虎航</span><span class="tag">機場取車</span><span class="tag">倉敷</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+      <!-- DAY 2 · 1/12（二） -->
+      <article class="day-card reverse is-pending" data-day="2">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">12</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">TUE</span>
+          </div>
+          <div class="day-tag">Day 02</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title pending">標題 待補</h3>
+          <p class="day-route">倉敷 → 休暇村讃岐五色台</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">倉敷國際飯店 退房</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">休暇村讃岐五色台 Check-in</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag pending">待補</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+      <!-- DAY 3 · 1/13（三） -->
+      <article class="day-card is-pending" data-day="3">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">13</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">WED</span>
+          </div>
+          <div class="day-tag">Day 03</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title pending">標題 待補</h3>
+          <p class="day-route">五色台 → 今治</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">休暇村讃岐五色台 退房</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">今治國際飯店 Check-in</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag pending">待補</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+      <!-- DAY 4 · 1/14（四） -->
+      <article class="day-card reverse is-pending" data-day="4">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">14</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">THU</span>
+          </div>
+          <div class="day-tag">Day 04</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title pending">標題 待補</h3>
+          <p class="day-route">今治 → 岡山</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">今治國際飯店 退房</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">岡山住宿 Check-in（住宿未選）</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag pending">待補</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+      <!-- DAY 5 · 1/15（五） -->
+      <article class="day-card is-pending" data-day="5">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">15</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">FRI</span>
+          </div>
+          <div class="day-tag">Day 05</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title pending">標題 待補</h3>
+          <p class="day-route">岡山</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag pending">待補</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+      <!-- DAY 6 · 1/16（六） -->
+      <article class="day-card reverse is-pending" data-day="6">
+        <div class="day-meta">
+          <div class="day-date">
+            <span class="date-day">16</span>
+            <span class="date-month">JAN</span>
+            <span class="date-weekday">SAT</span>
+          </div>
+          <div class="day-tag">Day 06</div>
+        </div>
+        <div class="day-body">
+          <h3 class="day-title">還車・返台<span class="pending-badge">待補</span></h3>
+          <p class="day-route">岡山 → 岡山機場 ✈ 桃園</p>
+          <div class="day-schedule">
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">岡山住宿 退房</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">待補</span></div>
+            <div class="time-row"><span class="time pending">--:--</span><span class="event pending">機場還車（還車時間 待補）、報到</span></div>
+            <div class="time-row"><span class="time">15:25</span><span class="event">岡山機場搭虎航 IT215</span></div>
+            <div class="time-row"><span class="time">17:30</span><span class="event">抵達桃園</span></div>
+          </div>
+          <div class="day-tags">
+            <span class="tag">還車</span><span class="tag">虎航</span><span class="tag">返台</span>
+          </div>
+        </div>
+        <div class="day-image no-img"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOTELS ============== -->
+<!-- 填寫：hotel-desc / hotel-features / hotel-meta 依官網或訂房確認信填 -->
+<section class="section section-hotels" id="hotels">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">住宿</h2>
+      <p class="section-subtitle">Accommodations</p>
+    </div>
+
+    <div class="hotels-grid">
+      <article class="hotel-card is-pending">
+        <div class="hotel-img no-img">
+          <div class="hotel-night">Night 01</div>
+          <div class="hotel-badge">未訂</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">KURASHIKI · 倉敷</span>
+          <h3>倉敷國際飯店</h3>
+          <p class="hotel-desc pending">介紹 待補</p>
+          <ul class="hotel-features">
+            <li class="pending">特色 待補</li>
+          </ul>
+          <div class="hotel-meta">
+            <span><strong>入住</strong> 1/11（一）</span>
+            <span><strong>房型</strong> <em class="pending">待補</em></span>
+            <span><strong>停車</strong> <em class="pending">待補</em></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="hotel-card featured is-pending">
+        <div class="hotel-img no-img">
+          <div class="hotel-night">Night 02</div>
+          <div class="hotel-badge">已訂</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">KAGAWA · 五色台</span>
+          <h3>休暇村讃岐五色台</h3>
+          <p class="hotel-desc pending">介紹 待補</p>
+          <ul class="hotel-features">
+            <li class="pending">特色 待補</li>
+          </ul>
+          <div class="hotel-meta">
+            <span><strong>入住</strong> 1/12（二）</span>
+            <span><strong>房型 / 餐</strong> <em class="pending">待補（依訂房確認信）</em></span>
+            <span><strong>停車</strong> <em class="pending">待補</em></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="hotel-card is-pending">
+        <div class="hotel-img no-img">
+          <div class="hotel-night">Night 03</div>
+          <div class="hotel-badge">待確認</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">IMABARI · 今治</span>
+          <h3>今治國際飯店</h3>
+          <p class="hotel-desc pending">介紹 待補</p>
+          <ul class="hotel-features">
+            <li class="pending">特色 待補</li>
+          </ul>
+          <div class="hotel-meta">
+            <span><strong>入住</strong> 1/13（三）</span>
+            <span><strong>房型</strong> <em class="pending">待補</em></span>
+            <span><strong>停車</strong> <em class="pending">待補</em></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="hotel-card is-pending">
+        <div class="hotel-img no-img">
+          <div class="hotel-night">Night 04-05</div>
+          <div class="hotel-badge">未選</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">OKAYAMA · 岡山</span>
+          <h3 class="pending">岡山住宿 待選</h3>
+          <p class="hotel-desc pending">介紹 待補</p>
+          <ul class="hotel-features">
+            <li class="pending">特色 待補</li>
+          </ul>
+          <div class="hotel-meta">
+            <span><strong>入住</strong> 1/14（四）– 1/15（五），2 晚</span>
+            <span><strong>房型</strong> <em class="pending">待補</em></span>
+            <span><strong>停車</strong> <em class="pending">待補</em></span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MAPS ============== -->
+<!-- 填寫：景點定了再加 map-card；iframe 的 q= 換成地點名稱即可 -->
+<section class="section section-maps" id="maps">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-number">05</span>
+      <h2 class="section-title">旅程地圖</h2>
+      <p class="section-subtitle">Journey Locations</p>
+    </div>
+
+    <p class="maps-intro pending">待補：地圖導言</p>
+
+    <div class="maps-grid">
+      <article class="map-card">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=岡山桃太郎空港&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="map-info">
+          <span class="map-tag">Day 1 + Day 6 · 起終點</span>
+          <h4>岡山機場</h4>
+          <p class="pending">取車 / 還車地點 待補</p>
+        </div>
+      </article>
+
+      <article class="map-card">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=倉敷国際ホテル&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="map-info">
+          <span class="map-tag">NIGHT 1 · 倉敷</span>
+          <h4>倉敷國際飯店</h4>
+          <p class="pending">地址 / 電話 待補</p>
+        </div>
+      </article>
+
+      <article class="map-card">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=休暇村讃岐五色台&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="map-info">
+          <span class="map-tag">NIGHT 2 · 五色台</span>
+          <h4>休暇村讃岐五色台</h4>
+          <p class="pending">地址 / 電話 待補</p>
+        </div>
+      </article>
+
+      <article class="map-card">
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=今治国際ホテル&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="map-info">
+          <span class="map-tag">NIGHT 3 · 今治</span>
+          <h4>今治國際飯店</h4>
+          <p class="pending">地址 / 電話 待補</p>
+        </div>
+      </article>
+
+      <article class="map-card is-pending">
+        <div class="map-frame">
+          <div class="pending-box">岡山住宿選定後放地圖</div>
+        </div>
+        <div class="map-info">
+          <span class="map-tag">NIGHT 4-5 · 岡山</span>
+          <h4 class="pending">岡山住宿 待選</h4>
+          <p class="pending">地址 / 電話 待補</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOD ============== -->
+<!-- 填寫：每個 food-item = 一道料理 / 一家店；food-large 是大格 -->
+<section class="section section-food" id="food">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title">美食</h2>
+      <p class="section-subtitle">Culinary Journey</p>
+    </div>
+
+    <p class="food-intro pending">待補：美食導言</p>
+
+    <div class="food-gallery">
+      <div class="food-item food-large no-img is-pending">
+        <div class="food-info">
+          <span class="food-day pending">Day ? · 地點</span>
+          <h4 class="pending">名稱 待補</h4>
+          <p class="pending">說明 待補</p>
+        </div>
+      </div>
+      <div class="food-item no-img is-pending">
+        <div class="food-info">
+          <span class="food-day pending">Day ? · 地點</span>
+          <h4 class="pending">名稱 待補</h4>
+          <p class="pending">說明 待補</p>
+        </div>
+      </div>
+      <div class="food-item no-img is-pending">
+        <div class="food-info">
+          <span class="food-day pending">Day ? · 地點</span>
+          <h4 class="pending">名稱 待補</h4>
+          <p class="pending">說明 待補</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WEATHER ============== -->
+<!-- 填寫：出發前一週有實際預報再畫溫度圖（參考 alishan-2026 的 weather-chart SVG） -->
+<section class="section section-weather" id="weather">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-number">07</span>
+      <h2 class="section-title">天氣</h2>
+      <p class="section-subtitle">Weather</p>
+    </div>
+
+    <p class="weather-intro">參考過去 10 年（2017–2026）1/11–1/16 的氣象廳實測：岡山白天平均最高約 10.5°C、清晨最低約 0°C；倉敷 10.1 / 0.4°C。這幾天很少下雨，但冷，開車走橋時風大。</p>
+
+    <div class="weather-chart-wrap">
+      <div class="pending-box">每日溫度預報圖 待補（出發前一週再填）</div>
+    </div>
+
+    <p class="weather-foot pending">待補：穿著建議</p>
+  </div>
+</section>
+
+<!-- ============== NOTES ============== -->
+<section class="section section-notes" id="notes">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">08</span>
+      <h2 class="section-title">旅人筆記</h2>
+      <p class="section-subtitle">Practical Tips</p>
+    </div>
+
+    <div class="culture-grid">
+      <div class="note-card is-pending">
+        <div class="note-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="10" width="18" height="7" rx="2"/>
+            <circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/>
+            <path d="M6 10l2-4h8l2 4"/>
+          </svg>
+        </div>
+        <h3>租車 與 自駕</h3>
+        <p class="pending">待補：租車公司、車型、ETC 卡、國際駕照 / 駕照日文譯本</p>
+        <ul class="note-list">
+          <li class="pending">待補</li>
+        </ul>
+      </div>
+
+      <div class="note-card is-pending">
+        <div class="note-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M2 18h20"/><path d="M4 18c2-6 6-9 8-9s6 3 8 9"/><path d="M12 9v9"/>
+          </svg>
+        </div>
+        <h3>過橋 與 過路費</h3>
+        <p class="pending">待補：路線定了再填</p>
+        <ul class="note-list">
+          <li class="pending">待補</li>
+        </ul>
+      </div>
+
+      <div class="note-card is-pending">
+        <div class="note-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20 7L9 18l-5-5"/>
+          </svg>
+        </div>
+        <h3>必備行李清單</h3>
+        <p class="pending">待補</p>
+        <ul class="note-list">
+          <li>護照</li>
+          <li>台灣駕照 + 日文譯本</li>
+          <li class="pending">待補</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUDGET ============== -->
+<section class="section section-budget" id="budget">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-number">09</span>
+      <h2 class="section-title">預算</h2>
+      <p class="section-subtitle">Budget Breakdown</p>
+    </div>
+
+    <div class="budget-summary">
+      <div class="budget-headline">
+        <span class="budget-label pending">總預算（人數 待補）</span>
+        <span class="budget-value pending">待補</span>
+        <span class="budget-per pending">平均每人 待補</span>
+      </div>
+    </div>
+
+    <div class="budget-table">
+      <div class="budget-row budget-head">
+        <div class="b-item">項目</div>
+        <div class="b-detail">說明</div>
+        <div class="b-price">金額</div>
+      </div>
+      <div class="budget-row">
+        <div class="b-item">機票</div>
+        <div class="b-detail">虎航 桃園 ↔ 岡山（已買）</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row">
+        <div class="b-item">租車</div>
+        <div class="b-detail pending">岡山機場取還 · 6 天 · 車型待補</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row">
+        <div class="b-item">過路費 + 油錢</div>
+        <div class="b-detail pending">路線定了再算</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row featured">
+        <div class="b-item">倉敷國際飯店</div>
+        <div class="b-detail">1 晚 · 1/11</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row featured">
+        <div class="b-item">休暇村讃岐五色台</div>
+        <div class="b-detail">1 晚 · 1/12（已訂）</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row featured">
+        <div class="b-item">今治國際飯店</div>
+        <div class="b-detail">1 晚 · 1/13</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row featured">
+        <div class="b-item">岡山住宿</div>
+        <div class="b-detail">2 晚 · 1/14–1/15（未選）</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row">
+        <div class="b-item">餐食</div>
+        <div class="b-detail pending">待補</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row">
+        <div class="b-item">旅遊保險</div>
+        <div class="b-detail pending">待補</div>
+        <div class="b-price pending">待補</div>
+      </div>
+      <div class="budget-row budget-total">
+        <div class="b-item">總計</div>
+        <div class="b-detail">不含個人購物</div>
+        <div class="b-price pending">待補</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CHECKLIST ============== -->
+<!-- 填寫：完成的項目把 timeline-tag 改「已訂」、標題後面加 ✓ ；急的加 class="urgent" -->
+<section class="section section-checklist" id="checklist">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">10</span>
+      <h2 class="section-title">預訂行動清單</h2>
+      <p class="section-subtitle">Booking Action Timeline</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker">已完成</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">已買</span>
+          <h4>虎航機票 ✓</h4>
+          <p>去程 1/11 IT214 桃園 11:10 → 岡山 14:35；回程 1/16 IT215 岡山 15:25 → 桃園 17:30。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">已完成</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">已訂</span>
+          <h4>休暇村讃岐五色台 · 1/12 ✓</h4>
+          <p class="pending">訂房編號 / 房型 / 含餐 待補</p>
+        </div>
+      </div>
+
+      <div class="timeline-item urgent">
+        <div class="timeline-marker pending">待補</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">未訂</span>
+          <h4>倉敷國際飯店 · 1/11</h4>
+          <p class="pending">待補</p>
+        </div>
+      </div>
+
+      <div class="timeline-item urgent">
+        <div class="timeline-marker pending">待補</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">待確認</span>
+          <h4>今治國際飯店 · 1/13</h4>
+          <p class="pending">待補</p>
+        </div>
+      </div>
+
+      <div class="timeline-item urgent">
+        <div class="timeline-marker pending">待補</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">未選</span>
+          <h4>岡山住宿 · 1/14–1/15</h4>
+          <p class="pending">待補</p>
+        </div>
+      </div>
+
+      <div class="timeline-item urgent">
+        <div class="timeline-marker pending">待補</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">未訂</span>
+          <h4>岡山機場租車 · 1/11–1/16</h4>
+          <p class="pending">租車公司 / 車型 / ETC 卡 / 取還時間 待補</p>
+        </div>
+      </div>
+
+      <div class="timeline-item is-pending">
+        <div class="timeline-marker pending">待補</div>
+        <div class="timeline-body">
+          <span class="timeline-tag">待補</span>
+          <h4 class="pending">其他項目 待補</h4>
+          <p class="pending">待補</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-mark">S</span>
+        <span class="footer-name">Setouchi Journey</span>
+      </div>
+      <p class="footer-message pending">待補：結尾一句話</p>
+      <div class="footer-coordinates">
+        <span>2027 · JANUARY</span>
+        <span>·</span>
+        <span>OKAYAMA · KAGAWA · EHIME</span>
+        <span>·</span>
+        <span>ROAD TRIP</span>
+      </div>
+      <div class="footer-bottom">
+        <span>Crafted with care</span>
+        <span class="footer-divider"></span>
+        <span>Itinerary v0.1 · 2026.11.09（框架版）</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
