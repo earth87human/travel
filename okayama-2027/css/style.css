@@ -3275,3 +3275,13 @@ img {
   color: rgba(241, 237, 230, 0.7);
   border-color: var(--copper-light);
 }
+
+.credits {
+  margin-top: 26px;
+  font-size: 0.72rem;
+  line-height: 1.9;
+  color: rgba(241, 238, 230, 0.4);
+  letter-spacing: 0.04em;
+}
+
+.credits a { color: rgba(241, 238, 230, 0.55); }
